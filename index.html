@@ -24,11 +24,25 @@
       }
     </style>
   --></head>
-  <body>
+  <body
+    onload="welcomeFunction(); document.body.style.backgroundColor='Pink' "
+    onresize="document.body.style.backgroundColor='lightblue' "
+    onkeydown="document.body.style.backgroundColor='white'"
+    onkeyup="document.body.style.backgroundColor='lightyellow'"
+  <script>
+    function welcomeFunction() 
+    {
+      alert("Welcome!") ;
+    }
+  </script>
+  >
     <p>
       <strong>Introduction to Information Systems</strong>
     </p>
-    <p class="centered">
+    <p
+      class="centered"
+      onmouseover="document.querySelector('.centered').style.font ='bold 20pt arial,serif'"
+    >
       <em>
         Beran Orkan Işık
         <br />
@@ -37,17 +51,27 @@
     </p>
 
     <p>Evolution of homo species</p>
-    <ul>
+    <ul
+      id="unorderedL"
+      onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'"
+    >
       <li>Homo Habilis (able man)</li>
       <li>Homo Erectus (upright man)</li>
       <li>Homo neanderthalensis</li>
       <li>Homo floresiensis (hobbit)</li>
       <li>Homo sapiens (wise man)</li>
-      <ul>
+      <ul id="insideUL"
+      onmouseover="document.getElementById('insideUL').style.backgroundColor='orange'">
         <li>Homo sapiens sapiens</li>
       </ul>
     </ul>
-    <h1><strong> Human Evolution </strong></h1>
+    <h1
+      onmouseover="style.color='orange';
+    style.backgroundColor='lightgreen'"
+      onmouseout="style.color='red' ; style.backgroundColor='white' "
+    >
+      <strong> Human Evolution </strong>
+    </h1>
     <p>
       <img
         src="/git-fundamentals-draft-itu-itis21-isikb21/images/evolution-diagram.png"
@@ -65,6 +89,8 @@
       This image is clickable, click on it and try.
       <a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
         <img
+          id="myImg"
+          onclick="alert(Document.getElementById('myImg').alt)"
           src="/git-fundamentals-draft-itu-itis21-isikb21/images/evolution-diagram.png"
           alt="evolution-diagram"
         />
